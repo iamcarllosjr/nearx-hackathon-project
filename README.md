@@ -19,3 +19,15 @@
 - As funções `setProductName`, `setQuantityProduced`, `setDepartureDate`, `setArrivalDate`, estão restritas a apenas para usuários da lista de permissões, e que exista alguma produção criada. Cujo número de identificador é usado como parâmetro para chamada destas funções.
 
 - As funções `getProductionsByCompany` e `getProductionByNumber`são publicas e qualquer pessoa pode chamar-las, para retornar dados de produções.
+
+## Fluxo de interação do usuário na UI/UX
+
+- Ao entrar no site da AgroSync, o usuário deve conectar sua carteira, lembrando que deve ser na rede de teste da Optimsm, a OP Sepolia.
+
+- Como adicionar a rede de teste da Optimism https://chainlist.org/chain/11155420
+
+- Ao se conectar, o usuário terar as opçoes de adicionar uma produção, editar, adicionar quantidade produzida, atualizar datas de envio e de recebimento do produto para seu destino.
+
+- Só pode criar uma nova produção, um endereço que está na alloList, onde somente o prorpretário do contrato tem acesso (questão de segunrança)
+
+- Após ser criada, o usuário pode vê-las no painel de busca, passando os paramêtros pedidos, para retornar seus produtos
