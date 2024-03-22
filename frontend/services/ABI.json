@@ -1,0 +1,468 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "initialOwner",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "ArrayisEmpty",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "InvalidAddress",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "LotNotFoundOrNotTheOwner",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "NotAuthorized",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "NotTheOwner",
+		"type": "error"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			}
+		],
+		"name": "OwnableInvalidOwner",
+		"type": "error"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "OwnableUnauthorizedAccount",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "ProductionNotFound",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "ProductionNumberExist",
+		"type": "error"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "productionNumber",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amountReceived",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "data",
+				"type": "uint256"
+			}
+		],
+		"name": "EventArrivalDate",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "productionNumber",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "quantitySent_",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "data",
+				"type": "uint256"
+			}
+		],
+		"name": "EventDepartureDate",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "productName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "data",
+				"type": "uint256"
+			}
+		],
+		"name": "EventHarvest",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "productionNumber",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "quantityProduced",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "data",
+				"type": "uint256"
+			}
+		],
+		"name": "EventProduction",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "allowListAddress",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "productionNumber_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "productName_",
+				"type": "string"
+			}
+		],
+		"name": "createProduction",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "company",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "productionNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "getProductionByNumber",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "company",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "harvest",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "productionNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantityProduced",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "DepartureDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ArrivalDate",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Harvesting.Production",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "company",
+				"type": "address"
+			}
+		],
+		"name": "getProductionsByCompany",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "company",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "harvest",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "productionNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantityProduced",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "DepartureDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ArrivalDate",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Harvesting.Production[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address[]",
+				"name": "addresses_",
+				"type": "address[]"
+			}
+		],
+		"name": "removeAddressList",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address[]",
+				"name": "addresses_",
+				"type": "address[]"
+			}
+		],
+		"name": "setAllowList",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "productionNumber_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amountReceived_",
+				"type": "uint256"
+			}
+		],
+		"name": "setArrivalDate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "productionNumber_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "quantitySent_",
+				"type": "uint256"
+			}
+		],
+		"name": "setDepartureDate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "productionNumber_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "newProductName_",
+				"type": "string"
+			}
+		],
+		"name": "setProductName",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "productionNumber_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "quantityProduced_",
+				"type": "uint256"
+			}
+		],
+		"name": "setQuantityProduced",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]

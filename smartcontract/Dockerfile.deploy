@@ -1,8 +1,0 @@
-FROM ghcr.io/foundry-rs/foundry
-
-WORKDIR /develop
-COPY . .
-
-RUN forge install Openzeppelin/openzeppelin-contracts --no-commit
-RUN forge b --skip test
-CMD ["forge script script/DeployHarvesting.s.sol:DeployHarvesting -f http://anvil:8545 --broadcast"]
