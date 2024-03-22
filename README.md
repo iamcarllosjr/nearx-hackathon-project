@@ -1,5 +1,6 @@
 # AgroSync - Plataforma de Rastreio de Produções Agrícolas Através da Blockchain
-https://www.loom.com/share/8ff4f005ae0349d7967ff6fdac737d00
+Vídeo explicativo : https://www.loom.com/share/8ff4f005ae0349d7967ff6fdac737d00
+Site em produção : https://dapp-lilac-three.vercel.app/defi
 
 ## Resumo do SmartContract
 
