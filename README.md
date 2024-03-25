@@ -3,6 +3,21 @@
 - Site em produção : https://dapp-lilac-three.vercel.app/defi
 - Contrato verificado : https://sepolia-optimism.etherscan.io/address/0x58fda51449837ac04f9543329e1edfb66326ccbd#code
 
+## Supply Chain Management 
+- Este é um exemplo de aplicação da tecnlogia Blockchain para gerenciar a cadeia de suprimentos agrícolas, oferencendo várias vantagens :
+
+### Transparência : 
+- Permitindo que todas as transações sejam registradas de forma imutável, criando um histórico de rastreamento que pode ser verificado por todos os envolvidos no processo. Isso é crucial para garantir a autenticidade dos produtos e a conformidade com as normas de qualidade e segurança alimentar.
+
+### Segurança : 
+-  A segurança é uma das principais vantagens da blockchain. Uma vez que os dados são registrados na blockchain, eles não podem ser alterados ou apagados. Isso ajuda a prevenir fraudes e garantir a integridade dos dados ao longo da cadeia de suprimentos.
+
+### Eficiência : 
+- Ao automatizar o processo de rastreamento e verificação, a blockchain pode reduzir significativamente o tempo e os custos associados à gestão da cadeia de suprimentos. Isso pode resultar em economias significativas para os produtores, fornecedores e consumidores.
+
+### Responsabilidade : 
+- A blockchain permite que cada parte da cadeia de suprimentos tenha uma responsabilidade clara e definida. Isso pode ajudar a prevenir práticas negativas, como o uso de ingredientes não declarados ou a manipulação de produtos.
+
 ## Resumo do SmartContract
 
 - Este contrato atua como forma de rastreio em cada etapa de uma produção agrícola, desde sua colheita, checagem de produção, envio, e chegada ao destino final.
